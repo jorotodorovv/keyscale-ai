@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
-import GlassCard from '../ui/GlassCard';
-import NeonToggle from '../ui/NeonToggle';
-import Chip from '../ui/Chip';
-import Toast from '../ui/Toast';
+import GlassCard from '../components/ui/GlassCard';
+import NeonToggle from '../components/ui/NeonToggle';
+import Chip from '../components/ui/Chip';
+import Toast from '../components/ui/Toast';
 
 const Settings: React.FC = () => {
   const { theme, setTheme, soundEnabled, setSoundEnabled, fontSize, setFontSize } = useAppContext();
