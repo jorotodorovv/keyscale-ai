@@ -1,0 +1,98 @@
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Glassmorphism effect */
+.glass-card {
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Metric pill */
+.metric-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 12px;
+  min-width: 100px;
+}
+
+/* Neon toggle */
+.neon-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.neon-toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.neon-toggle-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4a5568;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.neon-toggle-label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.neon-toggle-input:checked + .neon-toggle-label {
+  background-color: #00c896;
+  box-shadow: 0 0 10px #00c896;
+}
+
+.neon-toggle-input:checked + .neon-toggle-label:before {
+  transform: translateX(26px);
+}
+
+/* Chip */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Progress ribbon */
+.progress-ribbon {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.progress-ribbon-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00c896, #9d4edd);
+  border-radius: 3px;
+}
