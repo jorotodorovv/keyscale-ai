@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import GlassCard from '../ui/GlassCard';
-import MetricPill from '../ui/MetricPill';
-import ProgressRibbon from '../ui/ProgressRibbon';
+import GlassCard from './ui/GlassCard';
+import MetricPill from './ui/MetricPill';
+import ProgressRibbon from './ui/ProgressRibbon';
 import { loadWeaknessProfile, saveWeaknessProfile, updateWeaknessProfile, getTopWeakKeys, getTopWeakBigrams } from '../utils/weaknessDetection';
 import { addSession } from '../utils/analytics';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAppContext } from '../../context/AppContext';
+import { useAppContext } from '../context/AppContext';
 import GlassCard from '../ui/GlassCard';
 import NeonToggle from '../ui/NeonToggle';
 import Chip from '../ui/Chip';
