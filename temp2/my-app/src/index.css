@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Sora';
+    src: url('./assets/Sora-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./assets/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg;
+  }
+
+  .glass-card {
+    @apply glass p-6;
+  }
+
+  .metric-pill {
+    @apply px-3 py-1 rounded-full text-xs font-medium bg-white/10 backdrop-blur-sm;
+  }
+
+  .neon-toggle {
+    @apply relative inline-flex h-6 w-11 items-center rounded-full transition-colors;
+  }
+
+  .neon-toggle-bg {
+    @apply bg-gray-600;
+  }
+
+  .neon-toggle-bg[data-checked] {
+    @apply bg-teal-500;
+  }
+
+  .neon-toggle-thumb {
+    @apply inline-block h-4 w-4 transform rounded-full bg-white transition-transform;
+  }
+
+  .neon-toggle-thumb[data-checked] {
+    @apply translate-x-5;
+  }
+
+  .keycap-badge {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-md bg-white/10 border border-white/20 text-xs font-mono;
+  }
+
+  .tab-button {
+    @apply px-4 py-2 text-sm font-medium rounded-lg transition-colors;
+  }
+
+  .tab-button.active {
+    @apply bg-teal-500/20 text-teal-400;
+  }
+
+  .tab-button:not(.active) {
+    @apply hover:bg-white/10;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gradient-to-br from-gray-900 to-black text-white min-h-screen;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', sans-serif;
+}
+
+.code-font {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.animate-micro-shake {
+  animation: micro-shake 0.3s ease-in-out;
+}
+
+@keyframes micro-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
