@@ -22,7 +22,7 @@ const AppContext = createContext<AppContextType>({
 });
 
 // Create a provider component
-export const AppProvider: React.FC<{ children: any }> = ({ children }) => {
+export const AppProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   // Load initial values from localStorage or use defaults
   const [theme, setTheme] = useState<'light' | 'dark'>(
     loadFromLocalStorage<'light' | 'dark'>('theme', 'dark')

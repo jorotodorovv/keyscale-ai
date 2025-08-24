@@ -3,12 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react({
-    // Add TypeScript support
-    tsconfigPaths: true,
-    // Enable explicit type checking
-    typeCheck: true
-  })],
+  plugins: [react()],
   // Add resolve configuration for better module resolution
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.css'],

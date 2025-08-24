@@ -30,7 +30,7 @@ const TypingSurface: React.FC = () => {
     let interval: number | null = null;
     
     if (isTimerRunning) {
-      interval = setInterval(() => {
+      interval = window.setInterval(() => {
         setTimeElapsed(prev => prev + 1);
       }, 1000);
     }
@@ -79,7 +79,7 @@ const TypingSurface: React.FC = () => {
       saveWeaknessProfile(updatedProfile);
       
       // Save session to analytics
-      const mistakes = userInput.split('').reduce((count, char, index) => {
+      const mistakes = userInput.split('').reduce((count: number, char: string, index: number) => {
         return char !== text[index] ? count + 1 : count;
       }, 0);
       
