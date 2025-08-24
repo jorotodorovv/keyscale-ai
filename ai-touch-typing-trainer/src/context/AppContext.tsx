@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { loadFromLocalStorage, saveToLocalStorage } from '../utils/localStorage';
 
 // Define types for our context
@@ -22,7 +22,7 @@ const AppContext = createContext<AppContextType>({
 });
 
 // Create a provider component
-export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const AppProvider: React.FC<{ children: any }> = ({ children }) => {
   // Load initial values from localStorage or use defaults
   const [theme, setTheme] = useState<'light' | 'dark'>(
     loadFromLocalStorage<'light' | 'dark'>('theme', 'dark')

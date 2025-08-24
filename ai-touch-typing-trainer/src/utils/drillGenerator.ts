@@ -1,4 +1,4 @@
-import { KeyProfile, BigramProfile } from '../types/weakness';
+import type { KeyProfile, BigramProfile } from '../types/weakness';
 
 // Generate a drill based on weak keys and bigrams
 export const generateDrill = (

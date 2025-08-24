@@ -1,4 +1,4 @@
-import { KeyProfile, BigramProfile, WeaknessProfile } from '../types/weakness';
+import type { KeyProfile, BigramProfile, WeaknessProfile } from '../types/weakness';
 import { loadFromLocalStorage, saveToLocalStorage } from './localStorage';
 
 // Initialize empty weakness profile

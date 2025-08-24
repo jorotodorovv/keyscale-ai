@@ -27,7 +27,7 @@ const TypingSurface: React.FC = () => {
   
   // Timer effect
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+    let interval: number | null = null;
     
     if (isTimerRunning) {
       interval = setInterval(() => {
