@@ -7,7 +7,7 @@ interface ChipProps {
   className?: string;
 }
 
-const Chip: React.FC<ChipProps> = ({ label, onClick, selected = false, className = '' }) => {
+const Chip: React.FC<ChipProps> = ({ label, onClick, selected = false, className = '' }: ChipProps) => {
   return (
     <button
       onClick={onClick}

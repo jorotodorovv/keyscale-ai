@@ -7,7 +7,7 @@ interface NeonToggleProps {
   className?: string;
 }
 
-const NeonToggle: React.FC<NeonToggleProps> = ({ isToggled, onToggle, label, className = '' }) => {
+const NeonToggle: React.FC<NeonToggleProps> = ({ isToggled, onToggle, label, className = '' }: NeonToggleProps) => {
   return (
     <div className={`flex items-center ${className}`}>
       {label && <span className="mr-3 text-sm">{label}</span>}

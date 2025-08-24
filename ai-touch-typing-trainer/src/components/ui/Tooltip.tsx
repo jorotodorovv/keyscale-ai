@@ -6,7 +6,7 @@ interface TooltipProps {
   className?: string;
 }
 
-const Tooltip: React.FC<TooltipProps> = ({ content, children, className = '' }) => {
+const Tooltip: React.FC<TooltipProps> = ({ content, children, className = '' }: TooltipProps) => {
   const [visible, setVisible] = useState(false);
 
   return (

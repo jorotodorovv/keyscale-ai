@@ -1,0 +1,63 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importStar(require("react"));
+var Toast = function (_a) {
+    var message = _a.message, _b = _a.type, type = _b === void 0 ? 'info' : _b, _c = _a.duration, duration = _c === void 0 ? 3000 : _c, onClose = _a.onClose;
+    var _d = (0, react_1.useState)(true), visible = _d[0], setVisible = _d[1];
+    (0, react_1.useEffect)(function () {
+        var timer = setTimeout(function () {
+            setVisible(false);
+            if (onClose)
+                onClose();
+        }, duration);
+        return function () { return clearTimeout(timer); };
+    }, [duration, onClose]);
+    if (!visible)
+        return null;
+    var getTypeClasses = function () {
+        switch (type) {
+            case 'success': return 'bg-green-500';
+            case 'error': return 'bg-red-500';
+            case 'warning': return 'bg-yellow-500';
+            case 'info':
+            default: return 'bg-cyan-500';
+        }
+    };
+    return (<div className={"fixed top-4 right-4 ".concat(getTypeClasses(), " text-white px-4 py-2 rounded-lg shadow-lg z-50 transition-opacity duration-300")}>
+      {message}
+    </div>);
+};
+exports.default = Toast;

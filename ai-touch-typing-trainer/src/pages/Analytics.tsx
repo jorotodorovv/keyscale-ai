@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import GlassCard from '../components/ui/GlassCard';
 import MetricPill from '../components/ui/MetricPill';
 import Sparkline from '../components/ui/Sparkline';
-import { loadSessions, calculateStreak, calculateAverageWpm, calculateAverageAccuracy, TypingSession } from '../utils/analytics';
+import { loadSessions, calculateStreak, calculateAverageWpm, calculateAverageAccuracy } from '../utils/analytics';
+import type { TypingSession } from '../types/analytics';
 
 const Analytics: React.FC = () => {
   const [sessions, setSessions] = useState<TypingSession[]>([]);

@@ -9,7 +9,7 @@ import { addSession } from '../utils/analytics';
 const SAMPLE_TEXT = "The quick brown fox jumps over the lazy dog. This is a sample text for typing practice. Try to type as accurately and quickly as possible.";
 
 const TypingSurface: React.FC = () => {
-  const [text, setText] = useState<string>(SAMPLE_TEXT);
+  const [text] = useState<string>(SAMPLE_TEXT);
   const [userInput, setUserInput] = useState<string>('');
   const [wpm, setWpm] = useState<number>(0);
   const [accuracy, setAccuracy] = useState<number>(100);
@@ -31,7 +31,7 @@ const TypingSurface: React.FC = () => {
     
     if (isTimerRunning) {
       interval = window.setInterval(() => {
-        setTimeElapsed(prev => prev + 1);
+        setTimeElapsed((prev: number) => prev + 1);
       }, 1000);
     }
     
@@ -137,7 +137,7 @@ const TypingSurface: React.FC = () => {
       {/* Typing surface */}
       <GlassCard className="p-8">
         <div className="mb-6 min-h-[100px]">
-          {text.split('').map((char, index) => {
+          {text.split('').map((char: string, index: number) => {
             let charClass = 'text-white';
             if (index < userInput.length) {
               charClass = userInput[index] === char 

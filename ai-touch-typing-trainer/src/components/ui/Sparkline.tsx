@@ -12,7 +12,7 @@ const Sparkline: React.FC<SparklineProps> = ({
   width = 100, 
   height = 70, 
   color = 'cyan' 
-}) => {
+}: SparklineProps) => {
   if (data.length === 0) {
     return <div className="text-gray-500">No data</div>;
   }

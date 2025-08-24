@@ -12,7 +12,7 @@ const Toast: React.FC<ToastProps> = ({
   type = 'info', 
   duration = 3000,
   onClose 
-}) => {
+}: ToastProps) => {
   const [visible, setVisible] = useState(true);
   
   useEffect(() => {

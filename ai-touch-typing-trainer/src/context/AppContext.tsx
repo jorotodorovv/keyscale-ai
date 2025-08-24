@@ -22,18 +22,18 @@ const AppContext = createContext<AppContextType>({
 });
 
 // Create a provider component
-export const AppProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+export const AppProvider: React.FC<React.PropsWithChildren<{}>> = ({ children }: { children: React.ReactNode }) => {
   // Load initial values from localStorage or use defaults
   const [theme, setTheme] = useState<'light' | 'dark'>(
-    loadFromLocalStorage<'light' | 'dark'>('theme', 'dark')
+    loadFromLocalStorage('theme', 'dark')
   );
   
   const [soundEnabled, setSoundEnabled] = useState<boolean>(
-    loadFromLocalStorage<boolean>('soundEnabled', true)
+    loadFromLocalStorage('soundEnabled', true)
   );
   
   const [fontSize, setFontSize] = useState<number>(
-    loadFromLocalStorage<number>('fontSize', 16)
+    loadFromLocalStorage('fontSize', 16)
   );
 
   // Save to localStorage whenever values change

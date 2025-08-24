@@ -5,7 +5,7 @@ interface GlassCardProps {
   className?: string;
 }
 
-const GlassCard: React.FC<GlassCardProps> = ({ children, className = '' }) => {
+const GlassCard: React.FC<GlassCardProps> = ({ children, className = '' }: GlassCardProps) => {
   return (
     <div className={`backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-6 shadow-lg ${className}`}>
       {children}

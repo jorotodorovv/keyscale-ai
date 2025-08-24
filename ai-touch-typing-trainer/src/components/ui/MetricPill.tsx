@@ -6,7 +6,7 @@ interface MetricPillProps {
   className?: string;
 }
 
-const MetricPill: React.FC<MetricPillProps> = ({ label, value, className = '' }) => {
+const MetricPill: React.FC<MetricPillProps> = ({ label, value, className = '' }: MetricPillProps) => {
   return (
     <div className={`flex flex-col items-center justify-center bg-black/30 rounded-lg px-4 py-2 ${className}`}>
       <span className="text-xs text-cyan-400 font-semibold">{label}</span>

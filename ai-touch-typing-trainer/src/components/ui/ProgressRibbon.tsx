@@ -5,7 +5,7 @@ interface ProgressRibbonProps {
   className?: string;
 }
 
-const ProgressRibbon: React.FC<ProgressRibbonProps> = ({ progress, className = '' }) => {
+const ProgressRibbon: React.FC<ProgressRibbonProps> = ({ progress, className = '' }: ProgressRibbonProps) => {
   return (
     <div className={`h-2 w-full bg-gray-700 rounded-full overflow-hidden ${className}`}>
       <div 
