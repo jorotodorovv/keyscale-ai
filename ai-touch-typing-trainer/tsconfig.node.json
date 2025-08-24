@@ -25,7 +25,10 @@
 
     /* Linting */
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Composite settings for project references */
+    "composite": true
   },
   "include": ["vite.config.ts", "src/vite.d.ts"]
 }

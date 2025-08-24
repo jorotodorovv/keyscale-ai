@@ -27,7 +27,10 @@
 
     /* Linting */
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Composite settings for project references */
+    "composite": true
   },
   "include": ["src", "src/custom.d.ts", "src/react.d.ts"]
 }

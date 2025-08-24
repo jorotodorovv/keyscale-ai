@@ -31,7 +31,7 @@ const TypingSurface: React.FC = () => {
     
     if (isTimerRunning) {
       interval = window.setInterval(() => {
-        setTimeElapsed(prev => prev + 1);
+        setTimeElapsed((prev: number) => prev + 1);
       }, 1000);
     }
     
@@ -137,7 +137,7 @@ const TypingSurface: React.FC = () => {
       {/* Typing surface */}
       <GlassCard className="p-8">
         <div className="mb-6 min-h-[100px]">
-          {text.split('').map((char, index) => {
+          {text.split('').map((char: string, index: number) => {
             let charClass = 'text-white';
             if (index < userInput.length) {
               charClass = userInput[index] === char 
