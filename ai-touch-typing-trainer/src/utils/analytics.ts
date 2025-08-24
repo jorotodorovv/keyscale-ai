@@ -1,4 +1,4 @@
-import { TypingSession } from '../types/analytics';
+import type { TypingSession } from '../types/analytics';
 import { loadFromLocalStorage, saveToLocalStorage } from './localStorage';
 
 // Load sessions from localStorage
