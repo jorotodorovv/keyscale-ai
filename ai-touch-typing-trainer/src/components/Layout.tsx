@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Layout: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
+const Layout: React.FC<React.PropsWithChildren<{}>> = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   
   const navItems = [
