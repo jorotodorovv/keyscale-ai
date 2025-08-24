@@ -14,11 +14,12 @@ export const saveSessions = (sessions: TypingSession[]): void => {
 };
 
 // Add a new session
-export const addSession = (session: Omit<TypingSession, 'id'>): void => {
+export const addSession = (session: Omit<TypingSession, 'id' | 'date'> & { date: Date }): void => {
   const sessions = loadSessions();
   const newSession: TypingSession = {
     ...session,
-    id: Date.now().toString() // Simple ID generation
+    id: Date.now().toString(), // Simple ID generation
+    date: session.date.toISOString() // Convert Date to ISO string for storage
   };
   sessions.push(newSession);
   saveSessions(sessions);
